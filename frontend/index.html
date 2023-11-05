@@ -3,11 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>MediaGame</title>
 </head>
 <body>
-    <h1>MediaGame</h1>
+    <div id="app" class="container">
+
+        <header class="header">
+            <h1 class="header__title">MediaGame</h1>
+        </header>
+
+        <section class="login">
+            <form action="#" class="login__form">
+                <input class="login-form__input" type="text" placeholder="Mobile number or email">
+                <input class="login-form__input" type="password" placeholder="Password">
+
+                <button class="login-form__btn" type="submit">Log in</button>
+            </form>
+
+            <a href="#" class="login__forgotPsswrd">Forgot password?</a>
+
+            <div class="login__divider">
+                <div class="login-divider__line"></div>
+                <p class="login-divider__text">or</p>
+                <div class="login-divider__line"></div>
+            </div>
+
+
+            <button class="login__register-btn">Create new account</button>
+
+        </section>
+
+    </div>
 </body>
 </html>
