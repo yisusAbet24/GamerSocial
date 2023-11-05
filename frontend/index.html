@@ -14,7 +14,7 @@
             <h1 class="header__title">MediaGame</h1>
         </header>
 
-        <section class="login">
+        <section class="login" v-if="active==0">
             <form action="#" class="login__form">
                 <input class="login-form__input" type="text" placeholder="Mobile number or email">
                 <input class="login-form__input" type="password" placeholder="Password">
@@ -31,10 +31,33 @@
             </div>
 
 
-            <button class="login__register-btn">Create new account</button>
+            <button class="login__register-btn" @click="changeScreen(1)">Create new account</button>
 
         </section>
 
+        <section class="register" v-if="active == 1">
+            <form action="#" class="login__form">
+                <input class="login-form__input" type="text" placeholder="Username">
+                <input class="login-form__input" type="text" placeholder="Mobile number or email">
+                <input class="login-form__input" type="password" placeholder="Password">
+
+                <button class="login-form__btn" type="submit">Register</button>
+            </form>
+
+
+            <div class="login__divider">
+                <div class="login-divider__line"></div>
+                <p class="login-divider__text">or</p>
+                <div class="login-divider__line"></div>
+            </div>
+
+
+            <button class="login__register-btn" @click="changeScreen(0)">Log in</button>
+        </section>
+
     </div>
+
+
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>
