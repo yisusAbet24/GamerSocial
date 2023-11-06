@@ -1,0 +1,23 @@
+:root{
+    --color-principal: #1F2232;
+    --color-white: #fff;
+    --color-grey: rgb(219, 219, 219);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
