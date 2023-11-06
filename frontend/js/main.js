@@ -3,13 +3,13 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            active: 0,
+            screen: 0,
             
         }
     },
     methods: {
-        changeScreen(active) {
-            this.active = active;
+        changeScreen(screen) {
+            this.screen = screen;
             
 
         },
