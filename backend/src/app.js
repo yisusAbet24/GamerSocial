@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
+const cookieParser = require("cookie-parser");
 const { connectDB } = require("./config");
 const { errorHandler, notFound } = require("./middlewares");
 
@@ -15,6 +16,7 @@ connectDB();
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 // * Routes
 app.use("/api/auth", authRoutes);

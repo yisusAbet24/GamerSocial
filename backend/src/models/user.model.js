@@ -1,30 +1,35 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const { Schema } = mongoose; // Importa el objeto Schema de mongoose
+const { Schema } = mongoose;
 
 const UserSchema = new Schema(
   {
     name: {
       type: String,
-      required: [true, "Name is required"],
+      required: true,
       lowercase: true,
     },
     email: {
       type: String,
-      required: [true, "Email is required"],
-      unique: [true, "Email already exists"],
+      required: true,
+      unique: true,
       lowercase: true,
-      validate: {
-        validator: function (v) {
-          return /^[\w-\.]+@gmail.com$/.test(v);
-        },
-        message: "Email must be a valid Gmail address",
-      },
     },
     password: {
       type: String,
-      required: [true, "Password is required"],
+      required: true,
     },
+    role: {
+      type: String,
+      default: "user",
+      lowercase: true,
+    },
+    refreshToken: {
+      type: String,
+    },
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
   },
   {
     timestamps: true,
