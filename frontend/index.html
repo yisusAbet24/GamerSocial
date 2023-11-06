@@ -36,7 +36,7 @@
         </section>
 
         <section class="register" v-if="screen == 1">
-            <form action="#" class="login__form">
+            <form @submit.prevent="registerUser" class="login__form">
                 <input class="login-form__input" type="text" placeholder="Username">
                 <input class="login-form__input" type="text" placeholder="Mobile number or email">
                 <input class="login-form__input" type="password" placeholder="Password">
