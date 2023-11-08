@@ -4,6 +4,7 @@
     --color-grey: #b0b3b8;
     --color-lightGrey: #f0f2f5;
     --color-icons:#868686;
+    --color-darkGrey: #555555;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
@@ -231,6 +232,20 @@ button{
     justify-content: space-between;
 
 }
+.top__name{
+    font-weight: 700;
+}
+.top__settings{
+    fill: var(--color-icons);
+}
+.bottom__date{
+    color: var(--color-icons);
+    font-size: 14px;
+}
+.bottom__earth{
+    fill: var(--color-icons);
+    font-size: 14px;
+}
 .profile__img{
     width: 50px;
     height: 50px;
@@ -289,6 +304,8 @@ button{
     padding: 10px 0;
     border-radius: 20px;
     margin: 0 10px;
+    color: var(--color-darkGrey);
+    fill: var(--color-darkGrey);
 }
 .options__icon{
     font-size: 22px;
